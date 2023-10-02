@@ -1,0 +1,895 @@
+/*common part css start*/
+* {
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.fw-semiBold {
+    font-weight: 600;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.rounded-start-16 {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.rounded-end-16 {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.text-warning {
+    color: #FFA412 !important;
+}
+
+.text-success {
+    color: #27AE60 !important;
+}
+
+.text-danger {
+    color: #EB5757 !important;
+}
+
+.text-primary {
+    color: #2F80ED !important;
+}
+
+.bg-icon-primary {
+    background-color: #2972D5 !important;
+}
+
+.bg-icon-success {
+    background-color: #8C04D3 !important;
+}
+
+.bg-icon-danger {
+    background-color: #BC4343 !important;
+}
+
+/* btn background color */
+
+.bg-btn-primary {
+    background-color: #2F80ED !important;
+}
+
+.bg-btn-success {
+    background-color: #A700FF !important;
+}
+
+.bg-btn-danger {
+    background-color: #EB5757 !important;
+}
+
+.dropdown-menu {
+    min-width: 0;
+}
+
+/* common css end */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.orderList-admin {
+    border-radius: 30px;
+}
+
+/* sidebar part css start  */
+.sidebar {
+    width: 260px;
+    background-color: #363533;
+}
+
+.new-order .btn {
+    border-radius: 16px;
+    background-color: #FFA412;
+}
+
+.new-order .btn:active {
+    border-color: transparent;
+    background-color: #FFA412;
+}
+
+.new-order .btn i {
+    padding: 8px;
+    border-radius: 12px;
+    background-color: #ED9810;
+}
+
+.sidebar .nav-link {
+    color: #B5B2AD;
+    background-color: transparent;
+}
+
+.sidebar .nav-link i {
+    width: 35px;
+}
+
+.sidebar .nav-link.active {
+    color: #FFA412;
+    position: relative;
+    background-color: transparent;
+}
+
+.sidebar .nav-link.active i svg path {
+    fill: #FFA412;
+}
+
+.sidebar .nav-link.active .stroke svg path {
+    stroke: #FFA412;
+    fill: none;
+}
+
+.sidebar .nav-link.active::after {
+    top: 50%;
+    right: 0;
+    width: 8px;
+    height: 80%;
+    content: '';
+    border-radius: 4px;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: #FFA412;
+}
+
+.logOut .btn {
+    color: #696764 !important;
+}
+
+/* sidebar part css end  */
+
+
+/* Order List Part css start */
+.header {
+    height: 70px;
+    background-color: #F6F6F6;
+}
+
+.header .title {
+    color: #1A160E;
+    font-size: 20px;
+}
+
+.header .user-text h6 {
+    color: #1A160E;
+    font-size: 18px;
+}
+
+.header .user-text p {
+    font-size: 14px;
+    color: #5C5A5F;
+}
+
+.orderNo .orderNo-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.orderNo-drop .dropdown-menu {
+    min-width: 100%;
+}
+
+.orderNo-drop .dropdown .btn {
+    height: 52px;
+    color: #5C5A5F;
+    background-color: #F9FAFB;
+}
+
+.orderNo-drop .dropdown .btn i {
+    font-size: 20px;
+}
+
+.list-header {
+    border-radius: 16px;
+    background-color: #F0F0F0;
+}
+
+
+.list-items td {
+    vertical-align: middle;
+    color: #5C5A5F;
+}
+
+/* Scrollbar Styling */
+#orderList ::-webkit-scrollbar {
+    width: 4px;
+}
+
+#orderList ::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+}
+
+#orderList ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #444a6d;
+    height: 50%;
+}
+
+/* Order List Part css end */
+.gridtable tbody {
+    height: 32vh;
+    display: block;
+    overflow-y: scroll;
+}
+
+.gridtable thead,
+.gridtable tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+.gridtable thead {
+    position: relative;
+}
+
+.status-drop {
+    min-width: 0;
+}
+
+/* select dropdown button  */
+.dropdown .pending-btn {
+    width: 100%;
+    color: #FFA412;
+    background-color: #FEFAD1;
+    border: 1px solid #FFA412;
+}
+
+.dropdown .completed-btn {
+    width: 100%;
+    color: #27AE60;
+    background-color: #E7FFF5;
+    border: 1px solid #27AE60;
+}
+
+.dropdown .approved-btn {
+    width: 100%;
+    color: #2F80ED;
+    background-color: #EFF6FF;
+    border: 1px solid #2F80ED;
+}
+
+.dropdown .completed-btn {
+    width: 100%;
+    color: #27AE60;
+    background-color: #E7FFF5;
+    border: 1px solid #27AE60;
+}
+
+/* schedule order part css */
+.schedule-order tbody {
+    height: 63vh !important;
+}
+
+.save-btn {
+    bottom: 32px;
+    right: 30px;
+}
+
+.save-btn .btn {
+    border-radius: 16px;
+    background-color: #FFA412;
+}
+.save-btn .btn:active {
+    background-color: #FFA412;
+}
+
+/* settlement part css */
+.orderNo-drop .form-control {
+    height: 52px;
+    width: 385px;
+    border-radius: 4px;
+}
+
+.orderNo-amount .dropdown .btn {
+    height: 52px;
+    width: 385px;
+    border-radius: 4px;
+}
+
+.list-header {
+    border-radius: 16px;
+    background-color: #F0F0F0;
+}
+
+
+.list-items td {
+    vertical-align: middle;
+    color: #5C5A5F;
+}
+
+.settlement-box {
+    border-radius: 8px;
+    background-color: #F0F0F0;
+}
+
+.orderNo-drop .input-group-btn {
+    z-index: 4;
+}
+
+.orderNo-drop .input-group .btn {
+    height: 52px;
+    width: 53px;
+    line-height: 30px;
+    background-color: #FFA412;
+}
+
+.orderNo-drop input[type='file'] {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: default;
+}
+
+.search-user form {
+    width: 38%;
+}
+
+.search-box .form-control {
+    height: 52px;
+}
+
+.search-user form {
+    width: 38%;
+}
+
+.search-box .form-control {
+    height: 52px;
+}
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar-brand {
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    .new-order .btn {
+        font-size: 10px;
+        border-radius: 12px;
+    }
+
+    .new-order .btn i {
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .sidebar .nav-link {
+        font-size: 10px;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+
+    .sidebar i svg {
+        width: 13px;
+    }
+
+    .sidebar .nav-link.active::after {
+        width: 6px;
+    }
+
+    .logOut .btn {
+        font-size: 10px;
+    }
+
+    .header {
+        height: 50px;
+    }
+
+    .header .title {
+        font-size: 12px;
+    }
+
+    .header .user-text h6 {
+        font-size: 12px;
+    }
+
+    .header .user-text p {
+        font-size: 12px;
+    }
+
+    .orderNo .orderNo-text {
+        font-size: 10px;
+    }
+
+    .orderNo-drop .dropdown .btn {
+        height: 35px;
+        font-size: 10px;
+    }
+
+    .orderNo-drop .dropdown-menu .dropdown-item {
+        font-size: 13px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .list .list-header th {
+        font-size: 8px;
+    }
+
+    .list .list-items td {
+        font-size: 9px;
+    }
+
+    .list .list-items td svg {
+        width: 14px;
+    }
+
+    .gridtable tbody {
+        height: 22vh;
+    }
+
+    .orderNo-drop .form-control {
+        font-size: 10px;
+        height: 30px;
+        width: 230px;
+    }
+
+    .orderNo-drop .input-group .btn {
+        width: 40px;
+        height: 30px;
+        line-height: 0;
+    }
+
+    .orderNo-amount .dropdown .btn {
+        height: 30px;
+        width: 230px;
+        font-size: 10px;
+    }
+
+    .search-user .form-control {
+        height: 35px;
+        font-size: 10px;
+    }
+
+    .search-user .btn svg {
+        width: 16px;
+    }
+
+    .settlement-table thead {
+        margin-bottom: 8px !important;
+    }
+
+    .dropdown .pending-btn,
+    .dropdown .completed-btn,
+    .dropdown .approved-btn,
+    .dropdown .completed-btn {
+        font-size: 9px;
+    }
+
+    .dropdown .pending-btn svg,
+    .dropdown .completed-btn svg,
+    .dropdown .approved-btn svg,
+    .dropdown .completed-btn svg {
+        width: 9px !important;
+    }
+
+    .save-btn {
+        bottom: 15px;
+    }
+
+    .save-btn .btn {
+        font-size: 10px;
+        padding: 8px 10px !important;
+    }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1299.98px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .new-order .btn {
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    .new-order .btn i {
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .sidebar .nav-link {
+        font-size: 13px;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+    }
+
+    .sidebar i svg {
+        width: 16px;
+    }
+
+    .sidebar .nav-link.active::after {
+        width: 6px;
+    }
+
+    .logOut .btn {
+        font-size: 13px;
+    }
+
+    .header {
+        height: 50px;
+    }
+
+    .header .title {
+        font-size: 15px;
+    }
+
+    .header .user-text h6 {
+        font-size: 15px;
+    }
+
+    .orderNo .orderNo-text {
+        font-size: 13px;
+    }
+
+    .orderNo-drop .dropdown .btn {
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .orderNo-drop .dropdown-menu .dropdown-item {
+        font-size: 13px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .list .list-header th {
+        font-size: 11px;
+    }
+
+    .list .list-items td {
+        font-size: 11px;
+    }
+
+    .list .list-items td svg {
+        width: 14px;
+    }
+
+    .gridtable tbody {
+        height: 23vh;
+    }
+
+    .orderNo-drop .form-control {
+        font-size: 13px;
+        height: 38px;
+        width: 290px;
+    }
+
+    .orderNo-drop .input-group .btn {
+        width: 40px;
+        height: 38px;
+        line-height: 22px;
+    }
+
+    .orderNo-amount .dropdown .btn {
+        height: 38px;
+        width: 290px;
+        font-size: 13px;
+    }
+
+    .search-user .form-control {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .search-user .btn svg {
+        width: 18px;
+    }
+
+    .settlement-table thead {
+        margin-bottom: 8px !important;
+    }
+
+    .dropdown .pending-btn,
+    .dropdown .completed-btn,
+    .dropdown .approved-btn,
+    .dropdown .completed-btn {
+        font-size: 11px;
+    }
+
+    .dropdown .pending-btn svg,
+    .dropdown .completed-btn svg,
+    .dropdown .approved-btn svg,
+    .dropdown .completed-btn svg {
+        width: 11px !important;
+    }
+    .save-btn {
+        bottom: 15px;
+    }
+
+    .save-btn .btn {
+        font-size: 11px;
+        padding: 10px 15px !important;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1499.98px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .sidebar-brand {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .new-order .btn {
+        font-size: 15px;
+    }
+
+    .new-order .btn i {
+        border-radius: 10px;
+    }
+
+    .sidebar .nav-link {
+        font-size: 15px;
+    }
+
+    .sidebar i svg {
+        width: 18px;
+    }
+
+    .logOut .btn {
+        font-size: 13px;
+    }
+
+    .header {
+        height: 55px;
+    }
+
+    .header .title {
+        font-size: 15px;
+    }
+
+    .header .user-text h6 {
+        font-size: 15px;
+    }
+
+    .orderNo .orderNo-text {
+        font-size: 15px;
+    }
+
+    .orderNo-drop .dropdown .btn {
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .orderNo-drop .dropdown-menu .dropdown-item {
+        font-size: 15px;
+    }
+
+    .list .list-header th {
+        font-size: 13px;
+    }
+
+    .list .list-items td {
+        font-size: 14px;
+    }
+
+    .list .list-items td svg {
+        width: 14px;
+    }
+
+    .gridtable tbody {
+        height: 27vh;
+    }
+
+    .orderNo-drop .form-control {
+        font-size: 15px;
+        height: 45px;
+        width: 320px;
+    }
+
+    .orderNo-drop .input-group .btn {
+        width: 45px;
+        height: 45px;
+        line-height: 22px;
+    }
+
+    .orderNo-amount .dropdown .btn {
+        height: 45px;
+        width: 320px;
+        font-size: 15px;
+    }
+
+    .search-user .form-control {
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .search-user .btn svg {
+        width: 18px;
+    }
+
+    .settlement-table thead {
+        margin-bottom: 8px !important;
+    }
+    .dropdown .pending-btn,
+    .dropdown .completed-btn,
+    .dropdown .approved-btn,
+    .dropdown .completed-btn {
+        font-size: 14px;
+    }
+
+    .dropdown .pending-btn svg,
+    .dropdown .completed-btn svg,
+    .dropdown .approved-btn svg,
+    .dropdown .completed-btn svg {
+        width: 14px !important;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 1699.98px) {
+    .sidebar {
+        width: 230px;
+    }
+
+    .sidebar-brand {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .new-order .btn {
+        font-size: 15px;
+    }
+
+    .new-order .btn i {
+        border-radius: 10px;
+    }
+
+    .sidebar .nav-link {
+        font-size: 15px;
+    }
+
+    .sidebar i svg {
+        width: 18px;
+    }
+
+    .logOut .btn {
+        font-size: 13px;
+    }
+
+    .header .title {
+        font-size: 15px;
+    }
+
+    .header .user-text h6 {
+        font-size: 14px;
+    }
+
+    .orderNo .orderNo-text {
+        font-size: 14px;
+    }
+
+    .orderNo-drop .dropdown .btn {
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .orderNo-drop .dropdown-menu .dropdown-item {
+        font-size: 15px;
+    }
+
+    .list .list-header th {
+        font-size: 14px;
+    }
+
+    .list .list-items td {
+        font-size: 14px;
+    }
+
+    .list .list-items td svg {
+        width: 14px;
+    }
+
+    .gridtable tbody {
+        height: 30vh;
+    }
+
+    .orderNo-drop .form-control {
+        font-size: 15px;
+        height: 45px;
+        width: 320px;
+    }
+
+    .orderNo-drop .input-group .btn {
+        width: 45px;
+        height: 45px;
+        line-height: 22px;
+    }
+
+    .orderNo-amount .dropdown .btn {
+        height: 45px;
+        width: 320px;
+        font-size: 15px;
+    }
+
+    .search-user .form-control {
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .search-user .btn svg {
+        width: 20px;
+    }
+
+    .settlement-table thead {
+        margin-bottom: 8px !important;
+    }
+
+    .settlement-table tbody {
+        height: 18vh !important;
+    }
+}
+
+@media (min-width: 1700px) and (max-width: 1799.98px) {
+    .settlement-table tbody {
+        height: 22vh !important;
+    }
+}
+
+@media (min-width: 1800px) and (max-width: 1999.98px) {
+    .gridtable tbody {
+        height: 35vh;
+    }
+
+    .settlement-table tbody {
+        height: 30vh !important;
+    }
+}
+
+@media (min-width: 2000px) and (max-width: 2299.98px) {
+    .gridtable tbody {
+        height: 40vh;
+    }
+
+    .settlement-table tbody {
+        height: 30vh !important;
+    }
+}

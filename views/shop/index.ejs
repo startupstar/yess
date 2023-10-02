@@ -1,0 +1,141 @@
+<%- include('../includes/navigationee.ejs') %>
+    <%- include('../includes/navigatione.ejs') %>
+        <main style="overflow: scroll;">
+            <% if (prods.length> 0) { %>
+                <div class="list mx-3 mx-xl-4 mx-xxl-5 vh-100 pt-4">
+                    <% for (let product of prods) { %>
+                        <br>
+                        <div class=" list-header">
+                            <tbody class="list-items">
+                                <div>
+                                    Status : <%= product.status %>
+                                </div>
+                                <div class="schedule-order gridtable">
+                                    <tr>
+
+
+                                        <div class="list mx-3 mx-xl-4 mx-xxl-5 vh-50 pt-4">
+                                            <td class="py-2 py-xl-3 py-xxl-4" style="width: 10%;">
+                                                <%= product.title %>
+                                            </td>
+                                            <td class="py-2 py-xl-3 py-xxl-4">
+                                                <%= product.imageUrl %>
+                                            </td>
+                                            <td class="py-2 py-xl-3 py-xxl-4 fw-medium" style="width: 6%;">$<%=
+                                                    product.price %>
+                                            </td>
+                                            <br>
+                                            <td class="py-2 py-xl-3 py-xxl-4 fw-medium" style="width: 6%;">$<%=
+                                                    product.price %>
+                                            </td>
+                                            <br>
+                                            <br>
+                                            <td class="py-2 py-xl-3 py-xxl-4" style="width: 11%;">
+                                                <%= product.description %>
+                                            </td>
+
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" id="status-select">
+                                                        <option value="">Select Status</option>
+                                                        <option value="approved">Approve</option>
+                                                        <option value="pending">Pending</option>
+                                                        <option value="completed">Completed</option>
+                                                    </select>
+
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-info m-1" data-id="<%= product._id %>"
+                                                        id="update-status-btn">Update Status</button>
+
+                                                </div>
+                                                <div class="col-md-2">
+
+                                                    <button class="btn btn-primary m-1" data-id="<%= product.pdf %>"
+                                                        id="download-btn">Download</button>
+
+                                                </div>
+                                                <div class="col-md-2">
+
+                                                    <button class="btn btn-danger delete-product m-1"
+                                                        data-id="<%= product._id %>">Delete</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </tr>
+                                </div>
+                                <div class="save-btn position-absolute">
+
+
+
+                                </div>
+
+                        </div>
+
+
+
+                        <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Products Found!</h1>
+                    <% } %>
+
+
+                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                        <script>
+                            $('.delete-product').click(function () {
+                                const productId = $(this).data('id');
+                                console.log("ye id h", productId)
+                                $.ajax({
+                                    url: '/product/' + productId,
+                                    type: 'DELETE',
+                                    success: function (result) {
+                                        // TODO: handle the success case
+                                        console.log('done?')
+                                        window.location.reload()
+
+                                    },
+                                    error: function (err) {
+                                        console.error(err);
+                                        // TODO: handle the error case
+                                    }
+                                });
+                            });
+
+
+                            $('#download-btn').click(function () {
+                                const pdflink = $(this).data('id');
+                                window.location.href = pdflink
+                            })
+
+
+
+                            $('#update-status-btn').click(function () {
+                                const productId = $(this).data('id');
+                                const selectedStatus = $('#status-select').val();
+                                console.log(selectedStatus);
+                                console.log(productId);
+                                $.ajax({
+                                    url: '/product/' + productId,
+                                    type: 'PUT',
+                                    data: { status: selectedStatus },
+                                    success: function (result) {
+                                        console.log(result);
+                                        window.location.reload()
+
+                                        // TODO: handle the success case
+                                    },
+                                    error: function (err) {
+                                        console.error(err);
+                                        // TODO: handle the error case
+                                    }
+                                });
+                            });
+
+
+                        </script>
+
+
+        </main>
+        <%- include('../includes/end.ejs') %>
