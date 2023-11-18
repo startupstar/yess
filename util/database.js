@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 let _db;
 
 const mongoConnect = callback => {
-  const uri = 'mongodb+srv://mac45:lPx9yjgXrn0wPCuh@cluster0.rwhns6e.mongodb.net/mydb';
+  const uri = 'mongodb+srv://mac45:v47JmiGYELJymsMf@cluster0.rwhns6e.mongodb.net/mydb';
 
   MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(client => {
